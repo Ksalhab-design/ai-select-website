@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Select | Find the Right AI Tools</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f7fb;
+      color: #17243a;
+      text-align: center;
+    }
+    header {
+      background: #102c54;
+      color: white;
+      padding: 35px 20px;
+    }
+    main { padding: 50px 20px; }
+    h1 { font-size: 36px; }
+    p { line-height: 1.6; }
+    .card {
+      background: white;
+      max-width: 550px;
+      margin: 25px auto;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px #0001;
+    }
+    select, button {
+      padding: 14px;
+      font-size: 16px;
+      border-radius: 8px;
+      margin: 8px;
+    }
+    button {
+      background: #1765d1;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>AI SELECT</h2>
+    <p>Your guide to smarter software decisions</p>
+  </header>
+  <main>
+    <h1>Find the Right AI Tools</h1>
+    <p>Discover software that helps you work smarter and grow your business.</p>
+    <div class="card">
+      <h2>What do you want to accomplish?</h2>
+      <select id="goal">
+        <option value="website">Build an online store</option>
+        <option value="marketing">Attract more customers</option>
+        <option value="sales">Manage customer relationships</option>
+      </select>
+      <br>
+      <button onclick="recommend()">Find My Tools</button>
+      <p id="result"></p>
+    </div>
+    <p><small>Independent software comparisons. Some future links may earn us commissions.</small></p>
+  </main>
+  <script>
+    function recommend() {
+      const goal = document.getElementById("goal").value;
+      const results = {
+        website: "Start by comparing Shopify and Wix.",
+        marketing: "Start by comparing Semrush and Ahrefs.",
+        sales: "Start by comparing HubSpot and Zoho CRM."
+      };
+      document.getElementById("result").textContent = results[goal];
+    }
+  </script>
+</body>
+</html>
