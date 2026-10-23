@@ -121,8 +121,9 @@ marketing:"Compare Semrush and Ahrefs for search research and competitive analys
 crm:"Compare HubSpot and Zoho CRM for contact management and sales workflows. Consider your team size and integration needs."
 };
 const box=document.getElementById("result");
-box.textContent=results[goal];
-box.style.display="block";
+box.innerHTML = results[goal] + (goal === "store" ? ' <a href="https://shopify.pxf.io/c/8028207/2784851/13624" target="_blank" rel="noopener noreferrer sponsored">Start with Shopify →</a>' : "");box.style.display="block";
+box.style.display = "block";
+
 }
 </script>
 </body>
