@@ -1,130 +1,85 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name='impact-site-verification' value='acffd7bd-ebb9-4186-a2aa-89822456e326'>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Compare business software and find tools suited to your needs.">
-<title>Velcendra | Smarter Software Decisions</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="impact-site-verification" value="acffd7bd-ebb9-4186-a2aa-89822456e326">
+<meta name="description" content="Velcendra helps ambitious teams discover, compare, and choose software with clarity. Explore practical guides to AI, commerce, CRM, marketing, and automation.">
+<meta name="theme-color" content="#101323">
+<title>Velcendra — Find your next advantage</title>
+<link rel="canonical" href="https://velcendra.com/">
+<meta property="og:title" content="Velcendra — Find your next advantage">
+<meta property="og:description" content="A smarter way to discover and compare software for your business.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://velcendra.com/">
 <style>
-:root{--navy:#101e38;--blue:#2563eb;--light:#f4f7fc;--ink:#18253b}
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--light);color:var(--ink);line-height:1.6}
-header{background:var(--navy);color:white;padding:22px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.logo{font-size:23px;font-weight:800;letter-spacing:1px}
-nav a{color:#dce7ff;text-decoration:none;margin-left:20px;font-size:14px}
-.hero{background:linear-gradient(135deg,#101e38,#1e4b86);color:white;text-align:center;padding:75px 20px}
-.hero h1{font-size:clamp(32px,5vw,54px);max-width:750px;margin:0 auto 16px;line-height:1.15}
-.hero p{max-width:620px;margin:auto;color:#e1e9fa}
-.container{max-width:1100px;margin:auto;padding:45px 20px}
-.panel{background:white;border-radius:18px;padding:32px;box-shadow:0 8px 30px #142b4d12}
-.finder{max-width:760px;margin:-38px auto 30px;position:relative}
-h2{margin-top:0}
-select,button{font:inherit;padding:14px;border-radius:9px}
-select{width:100%;border:1px solid #cad4e3;background:white;margin:12px 0}
-button{background:var(--blue);color:white;border:0;cursor:pointer;font-weight:700}
-button:hover{background:#1747b9}
-#result{margin-top:18px;padding:16px;background:#eef4ff;border-radius:10px;display:none}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:25px}
-.card{background:white;padding:25px;border-radius:15px;border:1px solid #e1e7f0}
-.card h3{margin:0 0 10px}
-.tag{display:inline-block;font-size:12px;background:#e8f0ff;color:#164caa;padding:4px 10px;border-radius:20px}
-.card a{display:inline-block;margin-top:12px;color:#1759c7;font-weight:bold}
-.muted{color:#607087;font-size:14px}
-footer{background:var(--navy);color:#dce7ff;text-align:center;padding:35px 20px;font-size:14px}
-footer a{color:white}
-@media(max-width:600px){header{justify-content:center;text-align:center}nav a{margin:0 8px}.panel{padding:22px}.hero{padding:55px 20px}}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{--bg:#0d1020;--bg2:#14182a;--ink:#f8f7ff;--muted:#a9aec5;--line:rgba(255,255,255,.12);--violet:#a69cff;--lime:#d5f49d;--white:#fff;--paper:#f5f5f7;--dark:#151725}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",Arial,sans-serif}button,input,select{font:inherit}a{color:inherit;text-decoration:none}button{cursor:pointer}.container{width:min(1160px,calc(100% - 44px));margin:auto}.skip{position:absolute;left:-999px}.skip:focus{left:10px;top:10px;background:#fff;color:#111;padding:10px;z-index:100}
+header{position:sticky;top:0;z-index:20;background:rgba(13,16,32,.89);backdrop-filter:blur(20px);border-bottom:1px solid var(--line)}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;font:800 22px Manrope,Arial;letter-spacing:-1.2px}.mark{height:34px;width:34px;display:grid;place-items:center;background:var(--lime);color:#101323;border-radius:10px;transform:rotate(-8deg);font-size:22px}.navlinks{display:flex;align-items:center;gap:29px;color:#c9cbdb;font-size:14px}.navlinks a:hover,.navlinks a:focus{color:white}.navcta{padding:12px 18px;border:1px solid #73758b;border-radius:100px;font-size:13px;font-weight:700}.menu{display:none;background:none;border:0;color:white;font-size:25px}
+.hero{position:relative;overflow:hidden;padding:112px 0 110px;background:radial-gradient(ellipse at 83% 25%,rgba(111,94,201,.3),transparent 45%),radial-gradient(ellipse at 15% 100%,rgba(55,112,132,.16),transparent 40%)}.hero:after{content:"";position:absolute;width:440px;height:440px;right:-120px;top:70px;border:1px solid rgba(255,255,255,.11);border-radius:50%;box-shadow:0 0 0 70px rgba(255,255,255,.018),0 0 0 140px rgba(255,255,255,.018);pointer-events:none}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:2.3px;font-weight:800;color:var(--lime)}h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:Manrope,Arial,sans-serif}h1{font-size:clamp(49px,6.7vw,88px);line-height:1.07;letter-spacing:-5px;max-width:900px;margin:22px 0 25px;font-weight:800}.gradient{background:linear-gradient(100deg,#f7f7fc 5%,#c1b9ff 58%,#d5f49d);-webkit-background-clip:text;background-clip:text;color:transparent}.lede{font-size:19px;line-height:1.8;max-width:630px;color:#b9bdd1}.heroactions{display:flex;gap:13px;flex-wrap:wrap;margin-top:33px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:12px;padding:16px 22px;font-weight:800;font-size:14px;border:1px solid transparent;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.primary{background:var(--lime);color:#141725}.secondary{border-color:#595e74;color:white;background:rgba(255,255,255,.035)}.mini{font-size:12px;color:#a9aec5;margin-top:27px}.mini span{color:var(--lime)}
+.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:23px 0;color:#a6aac0}.tickerinner{display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap}.ticker strong{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#777e98}.ticker span{font-size:15px;font-weight:700}
+.section{padding:95px 0}.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:34px}.sectionhead h2{font-size:clamp(32px,4vw,52px);line-height:1.16;letter-spacing:-2px;margin:13px 0}.sectionhead p{max-width:390px;color:var(--muted);line-height:1.7;margin:0}.categorygrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.cat{background:#191d31;border:1px solid var(--line);border-radius:20px;padding:27px;min-height:205px;position:relative;transition:transform .2s,border .2s;text-align:left;color:white}.cat:hover,.cat:focus{transform:translateY(-4px);border-color:#b2aaff}.cat .symbol{display:grid;place-items:center;width:48px;height:48px;border-radius:13px;background:#292d48;font-size:24px;margin-bottom:24px}.cat h3{font-size:18px;letter-spacing:-.5px;margin-bottom:8px}.cat p{font-size:13px;color:#a8adc3;line-height:1.6}.arrow{position:absolute;right:25px;top:29px;font-size:23px;color:var(--lime)}
+.light{background:var(--paper);color:var(--dark)}.light .eyebrow{color:#6b57b3}.light .sectionhead p{color:#656a7a}.finder{display:grid;grid-template-columns:.88fr 1.12fr;gap:30px}.finderintro{background:#191d31;border-radius:22px;padding:38px;color:white;min-height:420px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}.finderintro:after{content:"✳";position:absolute;font-size:280px;opacity:.055;right:-40px;bottom:-100px}.finderintro h2{font-size:38px;line-height:1.18;letter-spacing:-1.8px}.finderintro p{color:#bdc0d3;line-height:1.75}.finderform{background:white;border:1px solid #e6e6ed;border-radius:22px;padding:35px;box-shadow:0 18px 60px rgba(26,29,50,.055)}.field{margin-bottom:20px}.field label{display:block;font-size:13px;font-weight:800;margin-bottom:9px}.field select{width:100%;padding:15px 16px;background:#fafafe;border:1px solid #dcdde8;border-radius:11px;color:#202235}.finderform .primary{width:100%;border:0}.recommendation{display:none;background:#f1f0ff;border:1px solid #d9d3ff;border-radius:13px;padding:20px;margin-top:20px;line-height:1.65}.recommendation.show{display:block}.recommendation strong{display:block;font-family:Manrope;margin-bottom:5px}.recommendation p{margin:0 0 12px;color:#50546c;font-size:14px}.recommendation a{display:inline-block;color:#4c389d;font-weight:800;text-decoration:underline;text-underline-offset:3px}.fine{font-size:12px;color:#737789;line-height:1.6;margin:16px 0 0}
+.toolsgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.tool{background:white;border:1px solid #e5e6ee;border-radius:19px;padding:25px;display:flex;flex-direction:column;min-height:310px}.tooltop{display:flex;justify-content:space-between;align-items:start}.toolicon{display:grid;place-items:center;width:53px;height:53px;border-radius:15px;background:#efedff;font-size:24px;color:#50449e;font-weight:800}.pill{border:1px solid #e3e3ea;border-radius:30px;padding:6px 9px;font-size:10px;color:#646a7b;font-weight:800}.tool h3{font-size:22px;letter-spacing:-1px;margin:23px 0 8px}.tool p{font-size:14px;color:#656a7c;line-height:1.65;flex:1}.tool a{font-size:14px;color:#48379a;font-weight:800}.tool a:hover{text-decoration:underline}.tool .smallprint{font-size:11px;color:#7e8190;margin-top:9px}.controls{display:flex;gap:12px;margin:0 0 24px;flex-wrap:wrap}.controls input,.controls select{padding:13px 15px;border:1px solid #d9dce6;border-radius:11px;background:#fff;color:#202235}.controls input{flex:1;min-width:220px}.controls select{min-width:190px}
+.guides{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.guide{border:1px solid var(--line);background:#191d31;border-radius:19px;padding:28px;min-height:265px}.guide .num{color:var(--lime);font-size:13px;font-weight:800}.guide h3{font-size:22px;letter-spacing:-1px;margin:38px 0 12px}.guide p{font-size:14px;color:#a9aec5;line-height:1.65}.guide a{font-weight:800;font-size:13px;color:var(--lime)}.guide a:hover{text-decoration:underline}
+.statement{background:#cfc9ff;color:#18162b;padding:76px 0}.statementinner{display:flex;justify-content:space-between;align-items:center;gap:25px}.statement h2{font-size:clamp(31px,4.2vw,55px);line-height:1.13;letter-spacing:-2px;max-width:730px;margin:0}.statement .btn{background:#16172c;color:white;white-space:nowrap}
+footer{padding:65px 0 25px;border-top:1px solid var(--line)}.footgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:35px}.footgrid p,.legal{color:#a2a7bd;line-height:1.75;font-size:13px}.footgrid h4{font-size:13px;margin-top:0}.footgrid a{display:block;color:#bdc0d0;margin:11px 0;font-size:13px}.footgrid a:hover{color:white}.bottom{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#8289a2;font-size:12px}
+@media(max-width:850px){.categorygrid,.toolsgrid,.guides{grid-template-columns:repeat(2,1fr)}.finder{grid-template-columns:1fr}.finderintro{min-height:260px}.statementinner{align-items:start;flex-direction:column}.navlinks{gap:15px}}@media(max-width:620px){.container{width:min(100% - 30px,1160px)}.nav{height:68px}.brand{font-size:19px}.navlinks{display:none;position:absolute;top:68px;left:0;right:0;padding:22px;background:#15182a;flex-direction:column;align-items:stretch}.navlinks.open{display:flex}.menu{display:block}.hero{padding:77px 0 82px}h1{letter-spacing:-2.8px}.lede{font-size:16px}.section{padding:68px 0}.sectionhead{display:block}.categorygrid,.toolsgrid,.guides{grid-template-columns:1fr}.cat{min-height:165px}.finderintro,.finderform{padding:25px}.finderintro h2{font-size:31px}.footgrid{grid-template-columns:1fr 1fr}.footgrid>div:first-child{grid-column:1/-1}.statement{padding:60px 0}.tickerinner{gap:14px}.ticker span{font-size:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 </style>
 </head>
 <body>
-<header>
-<div class="logo">VELCENDRA</div>
-<nav><a href="#finder">Find Tools</a><a href="#compare">Compare</a><a href="#about">About</a></nav>
-</header>
-<section class="hero">
-<h1>Find the right software. Make smarter decisions.</h1>
-<p>Discover and compare useful tools for building, marketing, and growing your business.</p>
-</section>
-<main class="container">
-<section class="panel finder" id="finder">
-<h2>What do you want to accomplish?</h2>
-<p class="muted">Choose your goal and receive a starting recommendation.</p>
-<label for="goal">Your business goal</label>
-<select id="goal">
-<option value="store">Build an online store</option>
-<option value="marketing">Attract more customers</option>
-<option value="crm">Manage customers and sales</option>
-</select>
-<button onclick="recommend()">Find My Tools</button>
-<div id="result" role="status" aria-live="polite"></div>
-</section>
-<section id="compare">
-<h2>Explore software comparisons</h2>
-<p class="muted">These are starting points, not paid rankings. Check each provider's current pricing and features.</p>
-<div class="cards">
-<article class="card">
-<span class="tag">Online stores</span>
-<h3>Shopify</h3>
-<p>Ecommerce platform for selling products online and managing orders.</p>
-<a href="https://shopify.pxf.io/c/8028207/2784851/13624" target="_blank" rel="noopener noreferrer">Visit Shopify ↗</a>
-</article>
-<article class="card">
-<span class="tag">Online stores</span>
-<h3>Wix</h3>
-<p>Website builder with ecommerce capabilities and visual design tools.</p>
-<a href="https://www.wix.com/" target="_blank" rel="noopener noreferrer">Visit Wix ↗</a>
-</article>
-<article class="card">
-<span class="tag">Marketing</span>
-<h3>Semrush</h3>
-<p>Tools for search visibility, keyword research, and marketing analysis.</p>
-<a href="https://www.semrush.com/" target="_blank" rel="noopener noreferrer">Visit Semrush ↗</a>
-</article>
-<article class="card">
-<span class="tag">Marketing</span>
-<h3>Ahrefs</h3>
-<p>Tools for search research, competitor analysis, and website performance.</p>
-<a href="https://ahrefs.com/" target="_blank" rel="noopener noreferrer">Visit Ahrefs ↗</a>
-</article>
-<article class="card">
-<span class="tag">Customer management</span>
-<h3>HubSpot</h3>
-<p>CRM platform for managing customer contacts, leads, and sales activities.</p>
-<a href="https://www.hubspot.com/" target="_blank" rel="noopener noreferrer">Visit HubSpot ↗</a>
-</article>
-<article class="card">
-<span class="tag">Customer management</span>
-<h3>Zoho CRM</h3>
-<p>Customer relationship management software for organizing sales workflows.</p>
-<a href="https://www.zoho.com/crm/" target="_blank" rel="noopener noreferrer">Visit Zoho CRM ↗</a>
-</article>
-</div>
-</section>
-<section class="panel" id="about" style="margin-top:35px">
-<h2>How our recommendations work</h2>
-<p>We group software by the problem it helps solve. Our current recommendations are introductory suggestions, not personalized assessments or comprehensive product reviews.</p>
-<p><strong>Affiliate disclosure:</strong> We may earn commissions from qualifying purchases through affiliate links added in the future. The current product links are ordinary links to providers.</p>
-<p class="muted">Velcendra helps businesses discover and compare software solutions.</p>
-</section>
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="container nav"><a class="brand" href="#top" aria-label="Velcendra home"><span class="mark" aria-hidden="true">✳</span> VELCENDRA</a><button class="menu" aria-label="Toggle navigation" aria-expanded="false" onclick="toggleMenu(this)">☰</button><nav class="navlinks" id="navigation"><a href="#categories">Explore categories</a><a href="#finder">Software finder</a><a href="#tools">Compare tools</a><a href="#guides">Guides</a><a class="navcta" href="#finder">Find my software ↗</a></nav></div></header>
+<main id="main">
+<section class="hero" id="top"><div class="container"><div class="eyebrow">Independent thinking. Better software choices.</div><h1>Find your next <span class="gradient">advantage.</span></h1><p class="lede">The right software can change everything. Discover powerful tools, compare your options, and build a smarter business—with clarity, not clutter.</p><div class="heroactions"><a class="btn primary" href="#finder">Find my ideal software <span aria-hidden="true">↗</span></a><a class="btn secondary" href="#categories">Explore the collection <span aria-hidden="true">↓</span></a></div><p class="mini"><span>✦</span> Clear comparisons &nbsp; · &nbsp; Practical recommendations &nbsp; · &nbsp; No paid rankings</p></div></section>
+<div class="ticker"><div class="container tickerinner"><strong>Explore what's possible</strong><span>AI & automation</span><span>Commerce</span><span>Marketing</span><span>Sales & CRM</span><span>Analytics</span></div></div>
+<section class="section" id="categories"><div class="container"><div class="sectionhead"><div><div class="eyebrow">Explore by ambition</div><h2>Big goals. Better tools.</h2></div><p>From your first online store to your next growth breakthrough, start with the problem you want to solve.</p></div><div class="categorygrid">
+<button class="cat" onclick="chooseCategory('commerce')"><span class="symbol">◈</span><span class="arrow">↗</span><h3>Build & sell online</h3><p>Launch stores, websites, and digital experiences.</p></button>
+<button class="cat" onclick="chooseCategory('marketing')"><span class="symbol">◎</span><span class="arrow">↗</span><h3>Attract more customers</h3><p>Discover SEO, content, and marketing platforms.</p></button>
+<button class="cat" onclick="chooseCategory('crm')"><span class="symbol">⌘</span><span class="arrow">↗</span><h3>Grow customer relationships</h3><p>Organize leads, sales pipelines, and follow-ups.</p></button>
+<button class="cat" onclick="chooseCategory('ai')"><span class="symbol">✳</span><span class="arrow">↗</span><h3>Work smarter with AI</h3><p>Explore AI tools and practical automation ideas.</p></button>
+<button class="cat" onclick="chooseCategory('operations')"><span class="symbol">▦</span><span class="arrow">↗</span><h3>Streamline operations</h3><p>Connect workflows and reduce repetitive work.</p></button>
+<button class="cat" onclick="chooseCategory('analytics')"><span class="symbol">◫</span><span class="arrow">↗</span><h3>Understand performance</h3><p>Make decisions with clearer data and reporting.</p></button>
+</div></div></section>
+<section class="section light" id="finder"><div class="container"><div class="sectionhead"><div><div class="eyebrow">The Velcendra software finder</div><h2>Less searching.<br>More certainty.</h2></div><p>Tell us what you're working toward. We'll suggest a practical starting point and an alternative to consider.</p></div><div class="finder"><div class="finderintro"><div><div class="eyebrow">Built around your goals</div><h2>The best tool is the one that fits your business.</h2><p>Skip endless lists. Start with your needs, then explore the trade-offs before you decide.</p></div><span style="color:var(--lime);font-size:13px;font-weight:800">DISCOVER → COMPARE → DECIDE</span></div><form class="finderform" id="finderForm"><div class="field"><label for="goal">What are you trying to achieve?</label><select id="goal" required><option value="commerce">Launch or grow an online store</option><option value="marketing">Bring more visitors to my website</option><option value="crm">Manage customers and sales</option><option value="ai">Use AI to work more efficiently</option><option value="operations">Automate repetitive workflows</option><option value="analytics">Understand business performance</option></select></div><div class="field"><label for="stage">Where is your business today?</label><select id="stage"><option value="starting">Just getting started</option><option value="growing">Growing and improving</option><option value="established">Established team</option></select></div><div class="field"><label for="budget">What monthly software budget are you considering?</label><select id="budget"><option value="low">Under $50</option><option value="mid">$50–$250</option><option value="high">Over $250</option><option value="unknown">Still exploring</option></select></div><button type="submit" class="btn primary">Show my starting point ↗</button><div class="recommendation" id="recommendation" role="status" aria-live="polite"></div><p class="fine">Recommendations are editorial starting points, not personalized procurement advice. Always confirm current features, prices, and terms with the provider.</p></form></div></div></section>
+<section class="section light" id="tools" style="padding-top:0"><div class="container"><div class="sectionhead"><div><div class="eyebrow">Curated discovery</div><h2>Explore the tools.</h2></div><p>Browse recognizable platforms and compare the type of business problem each one helps solve.</p></div><div class="controls"><input id="search" type="search" placeholder="Search software or use cases…" aria-label="Search software"><select id="filter" aria-label="Filter by category"><option value="all">All categories</option><option value="commerce">Commerce & websites</option><option value="marketing">Marketing & SEO</option><option value="crm">CRM & sales</option><option value="ai">AI & productivity</option><option value="operations">Automation</option><option value="analytics">Analytics</option></select></div><div class="toolsgrid" id="toolsGrid"></div><p class="fine" id="resultsCount" aria-live="polite"></p></div></section>
+<section class="section" id="guides"><div class="container"><div class="sectionhead"><div><div class="eyebrow">A clearer way forward</div><h2>Start with the questions<br>that matter.</h2></div><p>Short, useful decision frameworks to help you compare software with confidence.</p></div><div class="guides"><article class="guide"><div class="num">GUIDE 01 / COMMERCE</div><h3>Shopify or Wix?</h3><p>Consider whether your priority is a dedicated online store or a flexible website with commerce features.</p><a href="#finder" onclick="setGoal('commerce')">Explore commerce tools ↗</a></article><article class="guide"><div class="num">GUIDE 02 / GROWTH</div><h3>Which SEO platform fits?</h3><p>Think about keyword research, competitor intelligence, reporting needs, and ongoing costs.</p><a href="#tools" onclick="setFilter('marketing')">Explore marketing tools ↗</a></article><article class="guide"><div class="num">GUIDE 03 / SALES</div><h3>Finding the right CRM</h3><p>Compare contact management, team workflows, automation, and ease of adoption.</p><a href="#tools" onclick="setFilter('crm')">Explore CRM tools ↗</a></article></div></div></section>
+<section class="statement"><div class="container statementinner"><h2>Better decisions start with better questions.</h2><a class="btn" href="#finder">Find your next tool ↗</a></div></section>
 </main>
-<footer>
-<p>Velcendra – Discover smarter software solutions</p>
-<p>Product features, prices, and availability may change. Verify details with each provider.</p>
-</footer>
+<footer><div class="container"><div class="footgrid"><div><a class="brand" href="#top"><span class="mark" aria-hidden="true">✳</span> VELCENDRA</a><p>Find your next advantage.<br>Practical software discovery for ambitious businesses.</p></div><div><h4>Explore</h4><a href="#categories">Categories</a><a href="#finder">Software finder</a><a href="#tools">Software collection</a><a href="#guides">Decision guides</a></div><div><h4>Our approach</h4><p>We organize software by use case and highlight useful starting points. Inclusion does not imply endorsement, and we do not present paid rankings.</p></div></div><p class="legal"><strong>Affiliate disclosure:</strong> Velcendra may earn a commission when you click certain links and make a qualifying purchase, at no additional cost to you. Shopify links on this site are affiliate links. Other provider links currently lead to their public websites. Software features, pricing, and availability can change; verify details directly with each provider. Velcendra is not affiliated with or endorsed by the providers listed unless explicitly stated.</p><div class="bottom"><span>© <span id="year"></span> Velcendra. All rights reserved.</span><span>Built for smarter decisions.</span></div></div></footer>
 <script>
-function recommend(){
-const goal=document.getElementById("goal").value;
-const results={
-store:"Start with Shopify if your priority is running an online store. Compare Wix if visual website design is equally important.",
-marketing:"Compare Semrush and Ahrefs for search research and competitive analysis. Review current plans before choosing.",
-crm:"Compare HubSpot and Zoho CRM for contact management and sales workflows. Consider your team size and integration needs."
+const shopify="https://shopify.pxf.io/c/8028207/2784851/13624";
+const tools=[
+{name:"Shopify",category:"commerce",icon:"S",desc:"Commerce-focused platform for building online stores, managing products, and selling across channels.",url:shopify,affiliate:true},
+{name:"Wix",category:"commerce",icon:"W",desc:"Flexible website builder with design tools and optional online selling capabilities.",url:"https://www.wix.com/"},
+{name:"Semrush",category:"marketing",icon:"◉",desc:"SEO and marketing research tools for keywords, competitors, and online visibility.",url:"https://www.semrush.com/"},
+{name:"Ahrefs",category:"marketing",icon:"A",desc:"Research tools for organic search, backlinks, and competitive analysis.",url:"https://ahrefs.com/"},
+{name:"HubSpot",category:"crm",icon:"H",desc:"Customer relationship management and connected marketing, sales, and service tools.",url:"https://www.hubspot.com/"},
+{name:"Zoho CRM",category:"crm",icon:"Z",desc:"Sales CRM platform for contacts, pipelines, activities, and team workflows.",url:"https://www.zoho.com/crm/"},
+{name:"ChatGPT",category:"ai",icon:"✳",desc:"General-purpose AI assistant for drafting, research support, ideation, and productivity.",url:"https://chatgpt.com/"},
+{name:"Zapier",category:"operations",icon:"↗",desc:"Connect apps and automate repeatable workflows across common business tools.",url:"https://zapier.com/"},
+{name:"Google Analytics",category:"analytics",icon:"◫",desc:"Website analytics tools to understand traffic sources and visitor behavior.",url:"https://analytics.google.com/"}
+];
+const labels={commerce:"Commerce & websites",marketing:"Marketing & SEO",crm:"CRM & sales",ai:"AI & productivity",operations:"Automation",analytics:"Analytics"};
+function renderTools(){const q=document.getElementById("search").value.toLowerCase().trim(),f=document.getElementById("filter").value;const selected=tools.filter(t=>(f==="all"||t.category===f)&&(`${t.name} ${t.desc} ${labels[t.category]}`).toLowerCase().includes(q));const grid=document.getElementById("toolsGrid");grid.replaceChildren();for(const t of selected){const card=document.createElement("article");card.className="tool";const top=document.createElement("div");top.className="tooltop";const icon=document.createElement("span");icon.className="toolicon";icon.textContent=t.icon;const tag=document.createElement("span");tag.className="pill";tag.textContent=labels[t.category];top.append(icon,tag);const title=document.createElement("h3");title.textContent=t.name;const desc=document.createElement("p");desc.textContent=t.desc;const link=document.createElement("a");link.href=t.url;link.target="_blank";link.rel="noopener noreferrer sponsored";link.textContent="Explore "+t.name+" ↗";const note=document.createElement("div");note.className="smallprint";note.textContent=t.affiliate?"Affiliate link":"Provider website · Not an affiliate link";card.append(top,title,desc,link,note);grid.append(card)}document.getElementById("resultsCount").textContent=`Showing ${selected.length} of ${tools.length} tools. Listings are illustrative, not comprehensive rankings.`}
+document.getElementById("search").addEventListener("input",renderTools);document.getElementById("filter").addEventListener("change",renderTools);
+function setFilter(c){document.getElementById("filter").value=c;document.getElementById("search").value="";renderTools()}
+function setGoal(c){document.getElementById("goal").value=c}
+function chooseCategory(c){if(c==="ai"||c==="operations"||c==="analytics"){setFilter(c);document.getElementById("tools").scrollIntoView()}else{setGoal(c);document.getElementById("finder").scrollIntoView()}}
+function toggleMenu(b){const n=document.getElementById("navigation");const open=n.classList.toggle("open");b.setAttribute("aria-expanded",String(open))}
+document.querySelectorAll(".navlinks a").forEach(a=>a.addEventListener("click",()=>{document.getElementById("navigation").classList.remove("open");document.querySelector(".menu").setAttribute("aria-expanded","false")}));
+const picks={
+commerce:{name:"Shopify",other:"Wix",why:"Start with Shopify if selling products is central to your business. Consider Wix if flexible site design is your primary goal and commerce is secondary.",url:shopify,affiliate:true},
+marketing:{name:"Semrush",other:"Ahrefs",why:"Compare their research workflows, reporting needs, and current plans before committing. Both focus on search visibility and competitor intelligence.",url:"https://www.semrush.com/"},
+crm:{name:"HubSpot",other:"Zoho CRM",why:"HubSpot may appeal to teams wanting connected marketing and sales tools. Zoho CRM is another option for structured sales processes.",url:"https://www.hubspot.com/"},
+ai:{name:"ChatGPT",other:"Other AI tools for specific workflows",why:"Begin with a clearly defined task and test outputs carefully. Check privacy, team access, and integration requirements.",url:"https://chatgpt.com/"},
+operations:{name:"Zapier",other:"Native integrations built into your existing apps",why:"Map a repetitive workflow first, then compare automation platforms against built-in connections.",url:"https://zapier.com/"},
+analytics:{name:"Google Analytics",other:"Reporting built into your website platform",why:"Define the decisions you want to make before adding dashboards. Confirm privacy and consent requirements.",url:"https://analytics.google.com/"}
 };
-const box=document.getElementById("result");
-box.innerHTML = results[goal] + (goal === "store" ? ' <a href="https://shopify.pxf.io/c/8028207/2784851/13624" target="_blank" rel="noopener noreferrer sponsored">Start with Shopify →</a>' : "");box.style.display="block";
-box.style.display = "block";
-
-}
+document.getElementById("finderForm").addEventListener("submit",e=>{e.preventDefault();const goal=document.getElementById("goal").value,stage=document.getElementById("stage").value,budget=document.getElementById("budget").value,p=picks[goal],box=document.getElementById("recommendation");box.replaceChildren();const title=document.createElement("strong");title.textContent="Your starting point: "+p.name;const desc=document.createElement("p");desc.textContent=p.why+" Also compare: "+p.other+".";const context=document.createElement("p");context.textContent=(stage==="starting"?"As you're getting started, favor a simple setup and avoid unnecessary subscriptions.":stage==="growing"?"As you grow, review integrations and total cost as your usage increases.":"For an established team, evaluate permissions, support, and migration requirements.")+" "+(budget==="low"?"Check entry-level plans and free trials.":budget==="mid"?"Compare mid-tier plan limits carefully.":budget==="high"?"Request demos and review enterprise capabilities where relevant.":"Review current pricing before deciding.");const a=document.createElement("a");a.href=p.url;a.target="_blank";a.rel="noopener noreferrer sponsored";a.textContent="Explore "+p.name+" ↗";const note=document.createElement("p");note.className="fine";note.textContent=p.affiliate?"Affiliate link · We may earn a commission.":"Opens provider website · Not an affiliate link.";box.append(title,desc,context,a,note);box.classList.add("show");box.scrollIntoView({behavior:"smooth",block:"nearest"})});
+document.getElementById("year").textContent=new Date().getFullYear();renderTools();
 </script>
 </body>
 </html>
