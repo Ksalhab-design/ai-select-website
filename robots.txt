@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://velcendra.com/sitemap.xml
