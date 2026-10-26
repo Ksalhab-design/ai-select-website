@@ -48,7 +48,7 @@
 <a href="https://zapier.com/" target="_blank" rel="noopener noreferrer"><b>Zapier ↗</b><small>Business automation</small></a>
 <a href="https://www.semrush.com/" target="_blank" rel="noopener noreferrer"><b>Semrush ↗</b><small>Marketing research</small></a>
 </div></section></main>
-<footer><div class="container"><div class="footer-brand">Velcendra</div><p>Discover better. Compare smarter. Choose confidently.</p><p>Disclosure: Velcendra may earn a commission when you purchase through eligible partner links, at no additional cost to you. Partner relationships do not determine our comparison criteria. We do not claim to have independently tested products we have not tested. Product features and pricing can change; verify details with providers.</p><a href="/how-we-compare/">How we compare</a><span> · © 2026 Velcendra</span></div><span class="velcendra-legal" style="display:inline-block;margin-left:12px"><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/contact/">Contact</a></span></footer>
+<footer><div class="container"><div class="footer-brand">Velcendra</div><p>Discover better. Compare smarter. Choose confidently.</p><p>Disclosure: Velcendra may earn a commission when you purchase through eligible partner links, at no additional cost to you. Our recommendations are based on product suitability, not commissions. We do not claim to have independently tested products we have not tested. Product features and pricing can change; verify details with providers.</p><a href="/how-we-compare/">How we compare</a><span> · © 2026 Velcendra</span></div><span class="velcendra-legal" style="display:inline-block;margin-left:12px"><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/contact/">Contact</a></span></footer>
 <script>
 const searchRoutes=[[/shopify|wix|e.?commerce|store|selling/i,'/best-ecommerce-platforms/'],[/crm|hubspot|zoho|salesforce|customer|sales/i,'/best-crm-software/'],[/make|zapier|automat|workflow|integrat/i,'/best-business-automation/']];
 document.getElementById('software-search').addEventListener('submit',e=>{e.preventDefault();const q=document.getElementById('search-input').value.trim();if(!q)return;const match=searchRoutes.find(([rx])=>rx.test(q));if(match){location.href=match[1]}else{location.href='#finder';document.getElementById('goal').focus()}});
@@ -78,7 +78,7 @@ const tag=document.createElement('span');tag.className='tag';tag.textContent='Yo
 const h=document.createElement('h3');h.textContent=pick.name;
 const p=document.createElement('p');p.textContent=reason+' This is an editorial starting point, not a live price or eligibility check.';
 const a=document.createElement('a');a.className='btn';a.href=pick.url;a.target='_blank';a.rel='noopener noreferrer'+(pick.url.includes('shopify.pxf.io')?' sponsored':'');a.textContent='Explore '+pick.name+' ↗';
-const note=document.createElement('p');note.className='note';note.textContent=pick.url.includes('shopify.pxf.io')?'Affiliate link: Velcendra may earn a commission.':'Direct provider link; no commission currently configured.';
+const note=document.createElement('p');note.className='note';note.textContent=pick.url.includes('shopify.pxf.io')?'Affiliate link':'';
 result.append(tag,h,p,a,note);result.classList.add('show');result.scrollIntoView({behavior:'smooth',block:'nearest'});
 if(window.velcendraEvent)window.velcendraEvent('finder_result',{goal:goal,stage:stage,budget:budget,provider:pick.name});
 });
