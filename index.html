@@ -72,6 +72,7 @@ if(goal==='crm'&&budget==='mid'&&stage==='new')pick=providers.crm.low;
 if(goal==='auto'&&budget==='mid'&&stage==='new')pick=providers.auto.low;
 if(goal==='seo'&&budget==='mid'&&stage==='new')pick=providers.seo.low;
 const reason=pick.reason+(stage==='new'?' As a new business, prioritize ease of setup and avoid unnecessary subscriptions.':stage==='growing'?' For a growing business, verify integrations and upgrade costs.':' For an established team, assess permissions, reporting, security, and migration needs.');
+const directory=window.VelcendraLinks&&window.VelcendraLinks[pick.name];if(directory)pick={...pick,url:directory.url};
 const result=document.getElementById('result');result.replaceChildren();
 const tag=document.createElement('span');tag.className='tag';tag.textContent='Your tailored starting point';
 const h=document.createElement('h3');h.textContent=pick.name;
@@ -82,4 +83,4 @@ result.append(tag,h,p,a,note);result.classList.add('show');result.scrollIntoView
 if(window.velcendraEvent)window.velcendraEvent('finder_result',{goal:goal,stage:stage,budget:budget,provider:pick.name});
 });
 })();
-</script><script src="/site-events.js" defer></script></body></html>
+</script><script src="/affiliate-links.js"></script><script src="/site-events.js" defer></script></body></html>
