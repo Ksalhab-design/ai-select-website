@@ -28,10 +28,12 @@ window.velcendraEvent=function(name,details){
  }
 };
 function saveConsent(value){
+ const wasLoaded=loaded;
  consent=value==='granted';
  try{localStorage.setItem(storageKey,value);}catch(e){}
  if(consent)loadAnalytics();
  const panel=document.getElementById('velcendra-consent');if(panel)panel.remove();
+ if(!consent&&wasLoaded)location.reload();
 }
 function showConsent(force){
  if(consent&&!force){loadAnalytics();return;}
