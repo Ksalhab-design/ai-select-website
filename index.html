@@ -41,14 +41,14 @@
 <label for="budget">Monthly software budget</label><select id="budget"><option value="low">Under $50</option><option value="mid">$50–$200</option><option value="high">Over $200</option></select>
 <button id="recommend" class="blue-button" type="button">Show My Starting Point →</button><div class="result" id="result" role="status" aria-live="polite"></div></div></div></section>
 <section class="container providers"><h2>Explore Popular Software</h2><p>Compare your options, then visit the provider for current features and pricing.</p><div class="provider-grid">
-<a href="https://shopify.pxf.io/c/8028207/2784851/13624" target="_blank" rel="noopener noreferrer sponsored"><b>Shopify ↗</b><small>Online stores · Affiliate link</small></a>
+<a href="https://shopify.pxf.io/c/8028207/2784851/13624" target="_blank" rel="noopener noreferrer sponsored"><b>Shopify ↗</b><small>Online stores · <span class="affiliate-label">Affiliate link</span></small></a>
 <a href="https://www.wix.com/" target="_blank" rel="noopener noreferrer"><b>Wix ↗</b><small>Website builder</small></a>
 <a href="https://www.hubspot.com/" target="_blank" rel="noopener noreferrer"><b>HubSpot ↗</b><small>Customer relationships</small></a>
 <a href="https://www.zoho.com/crm/" target="_blank" rel="noopener noreferrer"><b>Zoho CRM ↗</b><small>Customer relationships</small></a>
 <a href="https://zapier.com/" target="_blank" rel="noopener noreferrer"><b>Zapier ↗</b><small>Business automation</small></a>
 <a href="https://www.semrush.com/" target="_blank" rel="noopener noreferrer"><b>Semrush ↗</b><small>Marketing research</small></a>
 </div></section></main>
-<footer><div class="container"><div class="footer-brand">Velcendra</div><p>Discover better. Compare smarter. Choose confidently.</p><p class="affiliate-footer">Velcendra may earn a commission through eligible partner links, at no additional cost to you.. See <a href="/how-we-compare/">How we compare</a>.</p><span> · © 2026 Velcendra</span></div><span class="velcendra-legal" style="display:inline-block;margin-left:12px"><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/contact/">Contact</a></span></footer>
+<footer><div class="container"><div class="footer-brand">Velcendra</div><p>Discover better. Compare smarter. Choose confidently.</p><p class="affiliate-footer">Velcendra may earn a commission through eligible partner links, at no additional cost to you.</p><p class="footer-method"><a href="/how-we-compare/">How we compare</a>.</p><span> · © 2026 Velcendra</span></div><span class="velcendra-legal" style="display:inline-block;margin-left:12px"><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/contact/">Contact</a></span></footer><style>.affiliate-label{display:inline-block;font-size:11px;font-weight:400;color:#94a3b8;margin-left:6px;letter-spacing:0;vertical-align:middle}.footer-method{margin:4px 0}</style>
 <script>
 const searchRoutes=[[/shopify|wix|e.?commerce|store|selling/i,'/best-ecommerce-platforms/'],[/crm|hubspot|zoho|salesforce|customer|sales/i,'/best-crm-software/'],[/make|zapier|automat|workflow|integrat/i,'/best-business-automation/']];
 document.getElementById('software-search').addEventListener('submit',e=>{e.preventDefault();const q=document.getElementById('search-input').value.trim();if(!q)return;const match=searchRoutes.find(([rx])=>rx.test(q));if(match){location.href=match[1]}else{location.href='#finder';document.getElementById('goal').focus()}});
@@ -77,7 +77,7 @@ const tag=document.createElement('span');tag.className='tag';tag.textContent='Yo
 const h=document.createElement('h3');h.textContent=pick.name;
 const p=document.createElement('p');p.textContent=reason+' This is an editorial starting point, not a live price or eligibility check.';
 const a=document.createElement('a');a.className='btn';a.href=pick.url;a.target='_blank';a.rel='noopener noreferrer'+(pick.url.includes('shopify.pxf.io')?' sponsored':'');a.textContent='Explore '+pick.name+' ↗';
-const note=document.createElement('span');note.className='note';note.textContent='Affiliate link';note.style.cssText='display:inline-block;margin-left:10px;font-size:12px;color:#64748b';
+const note=document.createElement('span');note.className='affiliate-label';note.textContent='Affiliate link';
 result.append(tag,h,p,a);if(pick.url.includes('shopify.pxf.io'))result.append(note);result.classList.add('show');result.scrollIntoView({behavior:'smooth',block:'nearest'});
 if(window.velcendraEvent)window.velcendraEvent('finder_result',{goal:goal,stage:stage,budget:budget,provider:pick.name});
 });
