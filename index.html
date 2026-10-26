@@ -65,7 +65,12 @@ const providers={
 const button=document.getElementById('recommend');if(!button)return;
 button.addEventListener('click',function(){
 const goal=document.getElementById('goal').value,stage=document.getElementById('stage').value,budget=document.getElementById('budget').value;
-const pick=providers[goal]&&providers[goal][budget];if(!pick)return;
+let pick=providers[goal]&&providers[goal][budget];if(!pick)return;
+// Stage changes the recommended product where a distinct editorial fit exists.
+if(goal==='store'&&budget==='low'&&stage==='established')pick=providers.store.mid;
+if(goal==='crm'&&budget==='mid'&&stage==='new')pick=providers.crm.low;
+if(goal==='auto'&&budget==='mid'&&stage==='new')pick=providers.auto.low;
+if(goal==='seo'&&budget==='mid'&&stage==='new')pick=providers.seo.low;
 const reason=pick.reason+(stage==='new'?' As a new business, prioritize ease of setup and avoid unnecessary subscriptions.':stage==='growing'?' For a growing business, verify integrations and upgrade costs.':' For an established team, assess permissions, reporting, security, and migration needs.');
 const result=document.getElementById('result');result.replaceChildren();
 const tag=document.createElement('span');tag.className='tag';tag.textContent='Your tailored starting point';
