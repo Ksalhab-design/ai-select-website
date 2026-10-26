@@ -33,10 +33,10 @@ function saveConsent(value){
  if(consent)loadAnalytics();
  const panel=document.getElementById('velcendra-consent');if(panel)panel.remove();
 }
-function showConsent(){
- if(consent){loadAnalytics();return;}
+function showConsent(force){
+ if(consent&&!force){loadAnalytics();return;}
  let decided=false;try{decided=localStorage.getItem(storageKey)==='denied';}catch(e){}
- if(decided)return;
+ if(decided&&!force)return;
  const panel=document.createElement('div');
  panel.id='velcendra-consent';panel.setAttribute('role','region');panel.setAttribute('aria-label','Analytics preferences');
  panel.style.cssText='position:fixed;bottom:12px;left:12px;right:12px;max-width:640px;z-index:9999;background:#fff;color:#14213a;border:1px solid #cdd6e2;box-shadow:0 5px 24px #0002;border-radius:12px;padding:16px;font:14px/1.5 system-ui,sans-serif';
@@ -55,6 +55,15 @@ document.addEventListener('click',function(event){
  const provider=url.hostname.replace(/^www\./,'');
  window.velcendraEvent('outbound_click',{provider:provider,affiliate:url.hostname==='shopify.pxf.io',page:location.pathname});
 });
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',showConsent);
-else showConsent();
+function init(){
+ const control=document.createElement('button');
+ control.type='button';control.textContent='Analytics preferences';
+ control.setAttribute('aria-label','Change analytics preferences');
+ control.style.cssText='position:fixed;bottom:0;right:0;z-index:9998;background:#fff;color:#243b5a;border:1px solid #cbd5e1;border-radius:8px 0 0 0;padding:5px 9px;font:12px system-ui,sans-serif;cursor:pointer';
+ control.addEventListener('click',function(){const existing=document.getElementById('velcendra-consent');if(existing)existing.remove();showConsent(true);});
+ document.body.appendChild(control);
+ showConsent(false);
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);
+else init();
 })();
