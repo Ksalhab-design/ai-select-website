@@ -56,7 +56,7 @@ document.getElementById('software-search').addEventListener('submit',e=>{e.preve
 <script>
 (function(){
 const providers={
- store:{low:{name:'Wix',url:'https://www.wix.com/',reason:'For a limited budget, compare entry-level website and store plans carefully; selling features may require a paid tier.'},mid:{name:'Shopify',url:'https://shopify.pxf.io/c/8028207/2784851/13624',reason:'A commerce-focused option; confirm the current subscription and payment fees fit your budget.'},high:{name:'Shopify',url:'https://shopify.pxf.io/c/8028207/2784851/13624',reason:'A commerce-focused option worth comparing for growing product catalogs and integrations.'}},
+ store:{low:{name:'Shopify',url:'https://shopify.pxf.io/c/8028207/2784851/13624',reason:'For a dedicated online store, Shopify is a commerce-focused starting point with product listings, checkout, and order management. Compare current plan pricing, payment fees, and any extra costs against your under-$50 budget. Wix is also worth comparing if your main priority is a general website with occasional selling.'},mid:{name:'Shopify',url:'https://shopify.pxf.io/c/8028207/2784851/13624',reason:'A commerce-focused option; confirm the current subscription and payment fees fit your budget.'},high:{name:'Shopify',url:'https://shopify.pxf.io/c/8028207/2784851/13624',reason:'A commerce-focused option worth comparing for growing product catalogs and integrations.'}},
  site:{low:{name:'Wix',url:'https://www.wix.com/',reason:'A visual builder to evaluate for a simple site on a limited budget.'},mid:{name:'Wix',url:'https://www.wix.com/',reason:'Review paid plans, domain, and booking or selling requirements.'},high:{name:'Wix',url:'https://www.wix.com/',reason:'Compare its design workflow and integrations against more advanced site requirements.'}},
  crm:{low:{name:'Zoho CRM',url:'https://www.zoho.com/crm/',reason:'Consider plan limits and per-user costs before choosing a low-budget CRM.'},mid:{name:'HubSpot',url:'https://www.hubspot.com/',reason:'Evaluate contact and pipeline management and paid-feature thresholds.'},high:{name:'HubSpot',url:'https://www.hubspot.com/',reason:'Evaluate the broader sales, marketing, and service ecosystem and total seat costs.'}},
  auto:{low:{name:'Make',url:'https://www.make.com/',reason:'Compare usage allowances and workflow complexity for a limited budget.'},mid:{name:'Zapier',url:'https://zapier.com/',reason:'Evaluate integration coverage and monthly task usage.'},high:{name:'Zapier',url:'https://zapier.com/',reason:'Evaluate team controls, integration coverage, and higher-volume task costs.'}},
@@ -67,7 +67,6 @@ button.addEventListener('click',function(){
 const goal=document.getElementById('goal').value,stage=document.getElementById('stage').value,budget=document.getElementById('budget').value;
 let pick=providers[goal]&&providers[goal][budget];if(!pick)return;
 // Stage changes the recommended product where a distinct editorial fit exists.
-if(goal==='store'&&budget==='low'&&stage==='established')pick=providers.store.mid;
 if(goal==='crm'&&budget==='mid'&&stage==='new')pick=providers.crm.low;
 if(goal==='auto'&&budget==='mid'&&stage==='new')pick=providers.auto.low;
 if(goal==='seo'&&budget==='mid'&&stage==='new')pick=providers.seo.low;
